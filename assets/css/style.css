@@ -1,15 +1,14 @@
 :root {
+    /*Font Section*/
     font-family: 'Poppins', sans-serif;
 
     /*Color Section*/
-    --main-color: #43AFFC;
-    --white-color: #fff;
-    --red-blood-color: #721c24;
-    --bright-pink-color: #f8d7da;
-    --pink-color: #f5c5cb;
-    --dark-green-color: #0c5460;
-    --light-cyan-color: #d1ecf1;
-    --light-green-color: #bee5eb;
+    --WhiteBG-Color: #fff;
+    --LightBG-Color: #43AFFC;
+    --DarkBloodBG-color: #721c24;
+    --LightPinkBG-color: #f8d7da;
+    --DarkGreenBG-color: #0c5460;
+    --LightGreenBG-color: #d1ecf1;
 }
 * {
     margin: 0;
@@ -21,15 +20,15 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: var(--main-color);
+    background: var(--LightBG-Color);
 }
 .wrapper {
     width: 400px;
     border-radius: 7px;
-    background: var(--white-color);
+    background: var(--WhiteBG-Color);
 }
 .wrapper header {
-    color: var(--main-color);
+    color: var(--LightBG-Color);
     font-size: 21px;
     font-weight: 500;
     padding: 16px 15px;
@@ -37,14 +36,20 @@ body {
     align-items: center;
     border-bottom: 1px solid #bfbfbf;
 }
-header i{
+header i {
     cursor: pointer;
+    font-size: 0px;
+    margin-right: 8px ;
+}
+.wrapper .active header {
     font-size: 30px;
-    margin-right: 8px;
+    margin-left: 5px;
 }
 .wrapper .input-part {
-    display: none;
     margin: 20px 25px 30px;
+}
+.wrapper .active .input-part {
+    display: none;
 }
 .input-part .info-txt {
     display: none;
@@ -54,17 +59,17 @@ header i{
     border-radius: 7px;
     margin-bottom: 15px;
 }
-.info-txt.error {
+.info-txt.error{
     display: block;
-    color: var(--red-blood-color);
-    background: var(--pink-color);
-    border: 1px solid var(--bright-pink-color);
+    color: var(--DarkBloodBG-color);
+    background: var(--LightPinkBG-color);
+    border: 1px solid #f5c6cb;
 }
-.info-txt.pending {
+.info-txt.pending{
     display: block;
-    color: var(--dark-green-color);
-    background: var(--light-cyan-color);
-    border: 1px solid var(--light-green-color);
+    color: var(--DarkGreenBG-color);
+    background: var(--LightGreenBG-color);
+    border: 1px solid #bee5eb;
 }
 .input-part :where(input, button) {
     width: 100%;
@@ -78,8 +83,8 @@ header i{
     text-align: center;
     border: 1px solid #bfbfbf;
 }
-.input-part input:is(:focus,:valid) {
-    border: 2px solid var(--main-color);
+.input-part input:is(:focus, :valid) {
+    border: 2px solid var(--LightBG-Color);
 }
 .input-part .seperator {
     height: 1px;
@@ -92,13 +97,88 @@ header i{
 }
 .seperator::before {
     content: "or";
-    color: #bfbfbf;
+    color: #ccc;
     font-size: 19px;
     padding: 0 15px;
-    background: var(--white-color);
+    background: var(--WhiteBG-Color);
 }
 .input-part button {
-    color: var(--white-color);
+    color: var(--WhiteBG-Color);
     cursor: pointer;
-    background: var(--main-color);
+    background: var(--LightBG-Color);
+}
+.wrapper .weather-part {
+    margin: 30px 0 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper .active .weather-part {
+    display: flex;
+}
+.weather-part img {
+    max-width: 125px;
+}
+.weather-part .temp {
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+.weather-part .temp .numb {
+    font-weight: 600;
+}
+.weather-part .temp .deg {
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+.weather-part .weather {
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+.weather-part .location {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+.location i {
+    font-size: 22px;
+    margin-right: 5px;
+}
+.weather-part .bottom-details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #bfbfbf;
+    justify-content: space-between;
+}
+.bottom-details .colomn {
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+}
+.colomn i {
+    font-size: 40px;
+    color: var(--LightBG-Color);
+}
+.colomn.humidity {
+    border-left: 1px solid #bfbfbf;
+}
+.details .temp, .humidity span {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+.details .temp .deg {
+    margin: 0;
+    font-size: 17px;
+    pad: 0 2px 1px;
+}
+.details p {
+    font-size: 14px;
 }

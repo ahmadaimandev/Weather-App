@@ -4,26 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--CSS File-->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <!--Link Favicon-->
+    <!--BoxIcons Icon CDN-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Favicon-->
     <link rel="shortcut icon" href="/weather-app-favicon.png" type="image/x-icon">
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <!--BoxIcon CDN-->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Weather App</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Weather Forecast</title>
 </head>
 <body>
-    <div class="wrapper">
-        <header><i class='bx bx-left-arrow-alt' ></i>Weather Forecast</header>
+    <div class="wrapper active">
+        <header>
+            <i class='bx bx-left-arrow-alt' ></i>
+            Weather Forecast App
+        </header>
         <section class="input-part">
             <p class="info-txt">Please enter a valid city name</p>
-            <input type="text" placeholder="enter the city name" spellcheck="false" required>
+            <input type="text" placeholder="Enter city name" spellcheck="false" required>
             <div class="seperator"></div>
-            <button>Get Device Location</button>
+            <button>Get Your Device Location</button>
         </section>
-        
+        <section class="weather-part">
+            <img src="/assets/svg-weather/cloudy.svg" alt="weather-icon">
+            <div class="temp">
+                <span class="numb">13</span>
+                <span class="deg">°</span>C
+            </div>
+            <div class="weather">Broken Clouds</div>
+            <div class="location">
+                <i class='bx bxs-map'></i>
+                <span>Shah Alam, <b>Selangor</b></span>
+            </div>
+            <div class="bottom-details">
+                <div class="colomn feels">
+                    <i class='bx bxs-thermometer'></i>
+                    <div class="details">
+                        <div class="temp">
+                            <span class="numb-2">17</span>
+                            <span class="deg">°</span>C
+                        </div> 
+                        <p>Feels Like</p>
+                    </div>
+                </div>
+                <div class="colomn humidity">
+                    <i class='bx bxs-droplet-half'></i>
+                    <div class="details">
+                        <span>87%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
-<script src="/assets/js/main.js"></script>
 </html>
