@@ -183,3 +183,13 @@ header i {
 .details p {
     font-size: 14px;
 }
+.input-part p {
+    margin: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+}
+.input-part a {
+    text-decoration: none;
+    color: var(--LightBG-Color);
+}
