@@ -1,29 +1,31 @@
-<div align="center">
+# Project Name
 
-# ☁ Weather Application
-
-<img src="image.png" alt="Project Image" width="300">
-
-</div>
+Short Description: [A brief summary of your project]
 
 ## Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget neque a lorem vehicula faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+[Insert a longer, more detailed description of your project. This section should provide more context, explain the purpose or goals of the project, and highlight its key features. However, keep it concise and easy to read.]
 
-<div align="center">
+## Table of Contents
 
-![Example](example.gif)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-</div>
+## Installation
+
+[Explain how to install and set up the project. Include any dependencies or prerequisites that need to be installed. Provide clear instructions and commands.]
 
 ## Usage
 
-To use this project, follow these steps:
+[Provide instructions on how to use the project, including any necessary configuration or setup. You can also include code examples or screenshots to demonstrate usage.]
 
-1. Clone the repository: `git clone https://github.com/username/project.git`
-2. Open `index.html` in your web browser.
-3. Enjoy!
+## Contributing
+
+[Specify how others can contribute to the project. This can include guidelines for reporting issues, suggesting improvements, or submitting pull requests.]
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+[Specify the license under which the project is distributed. For example, MIT, Apache, GNU, etc. Include any relevant copyright or license information.]
+
