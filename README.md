@@ -1,6 +1,6 @@
 <div align="center">
 
-# My Project
+# ☁ Weather Application
 
 <img src="image.png" alt="Project Image" width="300">
 
