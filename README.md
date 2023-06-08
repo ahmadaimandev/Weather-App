@@ -20,7 +20,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget neque a lorem 
 
 To use this project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/username/project.git`
+1. Clone the repository: `git clone https://github.com/ahmadaimandev/Weather-App.git`
 2. Open `index.html` in your web browser.
 3. Enjoy!
 
