@@ -82,6 +82,7 @@ header i {
 .input-part input {
     text-align: center;
     border: 1px solid #bfbfbf;
+    text-transform: uppercase;
 }
 .input-part input:is(:focus, :valid) {
     border: 2px solid var(--LightBG-Color);
