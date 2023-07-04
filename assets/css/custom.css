@@ -56,6 +56,7 @@ header i {
 }
 
 .wrapper .input-part {
+    display: none;
     margin: 20px 25px 30px;
 }
 
@@ -69,6 +70,7 @@ header i {
 }
 
 .input-part .info-txt {
+    display: none;
     font-size: 17px;
     text-align: center;
     padding: 12px 10px;
@@ -77,12 +79,14 @@ header i {
 }
 
 .info-txt.error {
+    display: block;
     color: var(--font-error-color);
     background: var(--primary-error-color);
     border: 1px solid var(--border-error-color);
 }
 
 .info-txt.pending {
+    display: block;
     color: var(--font-pending-color);
     background: var(--primary-pending-color);
     border: 1px solid var(--border-pending-color);
@@ -118,4 +122,12 @@ header i {
     padding: 0 15px;
     font-size: 19px;
     color: var(--tertiary-color);
+}
+
+.wrapper .weather-part {
+    margin: 30px 0 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
