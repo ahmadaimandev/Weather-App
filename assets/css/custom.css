@@ -1,5 +1,5 @@
 :root {
-    
+
     /*Font Theme*/
     --font-family: 'Poppins', sans-serif;
 
@@ -14,7 +14,7 @@
     --font-error-color: #721c24;
 
     /*Pending Theme Color*/
-    --primary-pending-color: #0c5460;
+    --primary-pending-color: #d1ecf1;
     --border-pending-color: #bee5eb;
     --font-pending-color: #0c5460;
 }
@@ -73,6 +73,7 @@ header i {
     text-align: center;
     padding: 12px 10px;
     border-radius: 7px;
+    margin-bottom: 15px;
 }
 
 .info-txt.error {
@@ -82,9 +83,9 @@ header i {
 }
 
 .info-txt.pending {
-    color: var(--font-error-color);
-    background: var(--primary-error-color);
-    border: 1px solid var(--border-error-color);
+    color: var(--font-pending-color);
+    background: var(--primary-pending-color);
+    border: 1px solid var(--border-pending-color);
 }
 
 .input-part input {
@@ -96,6 +97,9 @@ header i {
     color: var(--Font-color);
     background: var(--primary-color);
     cursor: pointer;
+}
+.input-part input:is(:focus, :valid) {
+    border: 2px solid var(--primary-color);
 }
 
 .input-part .seperator {
