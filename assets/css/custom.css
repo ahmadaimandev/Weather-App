@@ -1,0 +1,45 @@
+:root {
+    --font-family: 'Poppins', sans-serif;
+
+    /*Theme Color*/
+    --primary-color: #729FFF;
+    --tertiary-color: #bfbfbf;
+    --Font-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+
+.wrapper {
+    width: 400px;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.wrapper header {
+    color: var(--primary-color);
+    font-size: 21px;
+    font-weight: 500;
+    padding: 16px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+header i {
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 8px;
+}
