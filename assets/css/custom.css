@@ -1,10 +1,22 @@
 :root {
+    
+    /*Font Theme*/
     --font-family: 'Poppins', sans-serif;
 
     /*Theme Color*/
     --primary-color: #729FFF;
-    --tertiary-color: #bfbfbf;
+    --tertiary-color: hsl(0, 0%, 75%);
     --Font-color: #fff;
+
+    /*Error Theme Color*/
+    --primary-error-color: #f8d7da;
+    --border-error-color: #f5c6cb;
+    --font-error-color: #721c24;
+
+    /*Pending Theme Color*/
+    --primary-pending-color: #0c5460;
+    --border-pending-color: #bee5eb;
+    --font-pending-color: #0c5460;
 }
 
 * {
@@ -58,8 +70,23 @@ header i {
 
 .input-part .info-txt {
     font-size: 17px;
-    background: rebeccapurple;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
 }
+
+.info-txt.error {
+    color: var(--font-error-color);
+    background: var(--primary-error-color);
+    border: 1px solid var(--border-error-color);
+}
+
+.info-txt.pending {
+    color: var(--font-error-color);
+    background: var(--primary-error-color);
+    border: 1px solid var(--border-error-color);
+}
+
 .input-part input {
     text-align: center;
     border: 1px solid var(--tertiary-color);
