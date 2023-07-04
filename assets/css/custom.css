@@ -131,3 +131,45 @@ header i {
     justify-content: center;
     flex-direction: column;
 }
+
+.weather-part img {
+    width: 125px;
+}
+
+.weather-part .temp {
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.weather-part .temp .numb {
+    font-weight: 600;
+}
+
+.weather-part .temp .deg {
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+
+.weather-part .weather {
+    font-size: 21px;
+    text-align: center;
+    margin-top: -5px 20px 15px;
+}
+
+.weather-part .location {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.location i {
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.weather-part .bottom-details {
+    background: red;
+}
