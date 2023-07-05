@@ -53,15 +53,21 @@ body {
     border-bottom: 1px solid var(--tertiary-color);
 }
 
+/*Header Start*/
 header i {
     font-size: 0em ;
     cursor: pointer;
     margin-right: 8px;
 }
+/*Header End*/
 
 .wrapper .active header i{
     margin-left: 5px;
     font-size: 30px;
 }
-
 /*Wrapper Style End*/
+/*Wrapper With Input Part Start*/
+.wrapper .input-part {
+    margin: 20px 25px 30px;
+}
+/*Wrapper With Input Part End*/
