@@ -1,31 +1,32 @@
 //Get Your Location//
-const wrapper = document.querySelector('.wrapper'),
-    inputPart = document.querySelector('.input-part'),
-    infoTxt = inputPart.querySelector('.info-txt'),
-    inputField = inputPart.querySelector('.input'),
-    locationBtn = inputPart.querySelector('.button'),
-    weatherPart = wrapper.querySelector('.weather-part'),
-    wIcon = weatherPart.querySelector('img'),
-    arrowBack = wrapper.querySelector('.header i');
+const wrapper = document.querySelector(".wrapper");
+const inputPart = document.querySelector(".input-part");
+const infoTxt = inputPart ? inputPart.querySelector(".info-txt") : null;
+const inputField = inputPart ? inputPart.querySelector("input") : null;
+const locationBtn = inputPart ? inputPart.querySelector("button") : null;
+const weatherPart = wrapper.querySelector(".weather-part");
+const wIcon = weatherPart ? weatherPart.querySelector("img") : null;
+const arrowBack = wrapper.querySelector("header i");
 
 let api;
+
 inputField.addEventListener("keyup", e => {
     if (e.key == "Enter" && inputField.value != "") {
-        RequestApi(inputField.value)
-    }k
+        RequestApi(inputField.value);
+    }
 });
 
-//Request The  City API
+//Request The City API
 function RequestApi(city) {
     api = `YOUR_API_KEY`;
     fetchData();
 }
 
-//Request The Position (Latitude And Longtitude)
+//Request The Position (Latitude And Longitude)
 function onSuccess(position) {
-    const { latitude, longtitude } = position.coords;
+    const { latitude, longitude } = position.coords;
     api = `YOUR_API_KEY`;
-    fetch();
+    fetchData();
 }
 
 //Show Error Message
@@ -38,36 +39,40 @@ function onError(error) {
 function fetchData() {
     infoTxt.innerText = "Getting weather details...";
     infoTxt.classList.add("pending");
-    fetch(api).then(res => res.json()).then(result => weatherDetails(result)).catch(() => {
-        infoTxt.innerText = "Something went wrong. Please try again";
-        infoTxt.classList.replace("pending", "error");
-    });
+    fetch(api)
+        .then(res => res.json())
+        .then(result => weatherDetails(result))
+        .catch(() => {
+            infoTxt.innerText = "Something went wrong. Please try again";
+            infoTxt.classList.replace("pending", "error");
+        });
 }
 
 //Fetch weather details
-function weatherDetails(info){
-    if(info.cod == "404"){
+function weatherDetails(info) {
+    if (info.cod == "404") {
         infoTxt.classList.replace("pending", "error");
         infoTxt.innerText = `${inputField.value} isn't a valid city name`;
-    }else{
+    } else {
         const city = info.name;
         const country = info.sys.country;
-        const {description, id} = info.weather[0];
-        const {temp, feels_like, humidity} = info.main;
-        if(id == 800){
+        const { description, id } = info.weather[0];
+        const { temp, feels_like, humidity } = info.main;
+
+        if (id == 800) {
             wIcon.src = "icons/clear.svg";
-        }else if(id >= 200 && id <= 232){
-            wIcon.src = "icons/storm.svg";  
-        }else if(id >= 600 && id <= 622){
+        } else if (id >= 200 && id <= 232) {
+            wIcon.src = "icons/storm.svg";
+        } else if (id >= 600 && id <= 622) {
             wIcon.src = "icons/snow.svg";
-        }else if(id >= 701 && id <= 781){
+        } else if (id >= 701 && id <= 781) {
             wIcon.src = "icons/haze.svg";
-        }else if(id >= 801 && id <= 804){
+        } else if (id >= 801 && id <= 804) {
             wIcon.src = "icons/cloud.svg";
-        }else if((id >= 500 && id <= 531) || (id >= 300 && id <= 321)){
+        } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
             wIcon.src = "icons/rain.svg";
         }
-        
+
         weatherPart.querySelector(".temp .numb").innerText = Math.floor(temp);
         weatherPart.querySelector(".weather").innerText = description;
         weatherPart.querySelector(".location span").innerText = `${city}, ${country}`;
@@ -80,6 +85,6 @@ function weatherDetails(info){
     }
 }
 
-arrowBack.addEventListener('click', () => {
-    wrapper.classList.remove('active');
+arrowBack.addEventListener("click", () => {
+    wrapper.classList.remove("active");
 });
