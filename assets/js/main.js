@@ -28,3 +28,18 @@ function onSuccess (position) {
     fetch();
 }
 
+//Show Error Message
+function onError (error) {
+    infoTxt.innerText = error.message;
+    infoTxt.classList.add("Error");
+}
+
+//Fetch weather details data
+function fetchData(){
+    infoTxt.innerText = "Getting weather details...";
+    infoTxt.classList.add("pending");
+    fetch(api).then(res => res.json()).then(result => weatherDetails(result)).catch(() =>{
+        infoTxt.innerText = "Something went wrong. Please try again";
+        infoTxt.classList.replace("pending", "error");
+    });
+}
