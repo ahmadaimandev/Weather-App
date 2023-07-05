@@ -6,7 +6,7 @@
     /*Theme Color*/
     --primary-color: #729FFF;
     --tertiary-color: hsl(0, 0%, 75%);
-    --Font-color: #fff;
+    --Font-and-background-color: #fff;
 
     /*Error Theme Color*/
     --primary-error-color: #f8d7da;
@@ -33,147 +33,35 @@ body {
     min-height: 100vh;
     background: var(--primary-color);
 }
-header i {
-    cursor: pointer;
-    font-size: 30px;
-    margin-right: 8px;
-}
 
+/*Wrapper Style Start*/
 .wrapper {
     width: 400px;
+    background: var(--Font-and-background-color);
     border-radius: 7px;
-    background: #fff;
+    box-shadow: 7px 7px 20px rgba(0,0,0,0.05,);
+
 }
 
 .wrapper header {
-    color: var(--primary-color);
+    display: flex;
     font-size: 21px;
     font-weight: 500;
+    color: var(--primary-color);
     padding: 16px 15px;
-    display: flex;
     align-items: center;
     border-bottom: 1px solid var(--tertiary-color);
 }
 
-.wrapper .input-part {
-    display: none;
-    margin: 20px 25px 30px;
-}
-
-.input-part :where(input,button) {
-    width: 100%;
-    height: 55px;
-    border: none;
-    outline: none;
-    border-radius: 7px;
-    font-size: 18px;
-}
-
-.input-part .info-txt {
-    display: none;
-    font-size: 17px;
-    text-align: center;
-    padding: 12px 10px;
-    border-radius: 7px;
-    margin-bottom: 15px;
-}
-
-.info-txt.error {
-    display: block;
-    color: var(--font-error-color);
-    background: var(--primary-error-color);
-    border: 1px solid var(--border-error-color);
-}
-
-.info-txt.pending {
-    display: block;
-    color: var(--font-pending-color);
-    background: var(--primary-pending-color);
-    border: 1px solid var(--border-pending-color);
-}
-
-.input-part input {
-    text-align: center;
-    border: 1px solid var(--tertiary-color);
-}
-
-.input-part button {
-    color: var(--Font-color);
-    background: var(--primary-color);
+header i {
+    font-size: 0em ;
     cursor: pointer;
-}
-.input-part input:is(:focus, :valid) {
-    border: 2px solid var(--primary-color);
+    margin-right: 8px;
 }
 
-.input-part .seperator {
-    height: 1px;
-    width: 100%;
-    background: #ccc;
-    margin: 25px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.wrapper .active header i{
+    margin-left: 5px;
+    font-size: 30px;
 }
 
-.seperator::before {
-    content: "or";
-    background: #fff;
-    padding: 0 15px;
-    font-size: 19px;
-    color: var(--tertiary-color);
-}
-
-.wrapper .weather-part {
-    margin: 30px 0 0 ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.weather-part img {
-    width: 125px;
-}
-
-.weather-part .temp {
-    display: flex;
-    font-size: 72px;
-    font-weight: 500;
-}
-
-.weather-part .temp .numb {
-    font-weight: 600;
-}
-
-.weather-part .temp .deg {
-    font-size: 40px;
-    margin: 10px 5px 0 0;
-    display: block;
-}
-
-.weather-part .weather {
-    font-size: 21px;
-    text-align: center;
-    margin-top: -5px 20px 15px;
-}
-
-.weather-part .location {
-    display: flex;
-    align-items: center;
-    font-size: 21px;
-    margin-bottom: 30px;
-}
-
-.location i {
-    font-size: 22px;
-    margin-right: 5px;
-}
-
-.weather-part .bottom-details {
-    background: red;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+/*Wrapper Style End*/
