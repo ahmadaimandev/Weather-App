@@ -14,45 +14,30 @@
     <title>Weather App</title>
 </head>
 <body>
+    <!--Project Start Here-->
+    <!--Wrapper Container Start-->
     <div class="wrapper">
         <header><i class="bx bx-left-arrow-alt"></i>Weather App</header>
-        <section class="input-part">
-            <p class="info-txt">Please Enter A Valid City Name</p>
-            <input type="text" placeholder="Enter Your City Name" spellcheck="false" required>
-            <div class="seperator"></div>
-            <button>Get Your location</button>
-        </section>
-        <section class="weather-part">
-            <img src="/assets/svg/cloudy.svg" alt="Weather Icon">
-            <div class="temp">
-                <span class="numb">13</span>
-                <span class="deg">°</span>C
-            </div>
-            <div class="weather">Broken Clouds</div>
-            <div class="location">
-                <i class="bx bx-map"></i>
-                <span>Shah Alam, Selangor</span>
-            </div>
-            <div class="bottom-details">
-                <div class="colomn feels">
-                    <i class="bx bxs-thermometer"></i>
-                    <div class="details">
-                        <div class="temp">
-                            <span class="numb">17</span>
-                            <span class="deg">°</span>C
-                        </div>
-                        <p>Feels Like</p>
-                    </div>
-                </div>
-                <div class="colomn humidity">
-                    <i class="bx bxs-droplet-half"></i>
-                    <div class="details">
-                        <span class="numb">84%</span>
-                        <p>humidity</p>
-                    </div>
-                </div>
+
+        <!--Section Input Part Start-->
+        <section class="input part">
+            <p class="info-txt"></p>
+            <div class="content">
+                <input type="text" placeholder="Enter City Name" spellcheck="false" required>
+                <div class="seperator"></div>
+                <button>Get Your Device Location</button>
             </div>
         </section>
+        <!--Section Input Part End-->
+
+        <!--Weather Part Start-->
+        <section class="weather-part"></section>
+        <!--Weather Part End-->
     </div>
+    <!--Wrapper Container End-->
+    <!--Project End Here-->
+
+    <!--Javascript-->
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
